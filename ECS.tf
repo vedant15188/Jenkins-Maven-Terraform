@@ -14,7 +14,7 @@ resource "aws_ecs_task_definition" "MavenTaskDef" {
   [
     {
       "name": "MavenWebSite",
-      "image": "${aws_ecr_repository.ECR}:latest",
+      "image": "${aws_ecr_repository.ECR.repository_url}:latest",
       "cpu": 1,
       "memory": 128,
       "essential": true,
